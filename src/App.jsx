@@ -1,7 +1,11 @@
 //import { Hero } from "./components/index"
+import FlexContent from "./components/FlexContent";
 import Hero from "./components/Hero";
 import Sales from "./components/Sales";
-import { heroapi,popularsales,toprateslaes } from "./data/data"
+import { heroapi,popularsales,toprateslaes,highlight,sneaker } from "./data/data"
+
+
+
 
 
 const App = () => {
@@ -17,9 +21,11 @@ const App = () => {
           sociallinks={sociallinks}
           videos={videos}
         />
-        <Sales endpoint={popularsales}  ifExist/>
-        <Sales endpoint={ toprateslaes} />
+        <Sales endpoint={popularsales} ifExists={true} />
+        <FlexContent endpoint={highlight} ifExists />
+        <Sales endpoint={toprateslaes}  ifExists={false} />
 
+        <FlexContent endpoint={sneaker} ifExists />
       </main>
     </>
   );
