@@ -2,7 +2,8 @@
 import FlexContent from "./components/FlexContent";
 import Hero from "./components/Hero";
 import Sales from "./components/Sales";
-import { heroapi,popularsales,toprateslaes,highlight,sneaker } from "./data/data"
+import Stories from "./components/Stories";
+import { heroapi,popularsales,toprateslaes,highlight,sneaker,story } from "./data/data"
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
         <Sales endpoint={toprateslaes}  ifExists={false} />
 
         <FlexContent endpoint={sneaker} ifExists />
+        <Stories story={story}/>
       </main>
     </>
   );
