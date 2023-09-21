@@ -1,5 +1,5 @@
 import  { useEffect, useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+ import { useDispatch, useSelector } from "react-redux";
 // import { selectTotalQTY, setOpenCart } from "../app/CartSlice.js";
 
 import {
@@ -8,19 +8,20 @@ import {
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
+import { selectTotalQTY, setOpenCart } from "../app/CartSlice";
 
 const Navbar = () => {
   const [navState, setNavState] = useState(false);
-//   const dispatch = useDispatch();
-//   const totalQTY = useSelector(selectTotalQTY);
+  const dispatch = useDispatch();
+  const totalQTY = useSelector(selectTotalQTY);
 
-  // const onCartToggle = () => {
-  //   dispatch(
-  //     setOpenCart({
-  //       cartState: true,
-  //     })
-  //   );
-  // };
+  const onCartToggle = () => {
+    dispatch(
+      setOpenCart({
+        cartState: true,
+      })
+    );
+  };
 
   const onNavScroll = () => {
     if (window.scrollY > 30) {
@@ -72,6 +73,7 @@ const Navbar = () => {
             <li className="grid items-center">
               <button
                 type="button"
+                onClick={onCartToggle }
                 className="border-none outline-none active:scale-110 transition-all duration-300 relative"
               >
                 <ShoppingBagIcon
@@ -86,7 +88,7 @@ const Navbar = () => {
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
                 >
-                  0
+             {totalQTY}
                 </div>
               </button>
             </li>
@@ -98,4 +100,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-//1.52:27

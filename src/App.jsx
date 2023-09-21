@@ -1,4 +1,5 @@
 //import { Hero } from "./components/index"
+import Cart from "./components/CArt";
 import FlexContent from "./components/FlexContent";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -15,7 +16,8 @@ const App = () => {
   const { title, subtitle, btntext, img, sociallinks, videos } = heroapi;
   return (
     <>
-      <Navbar/>
+      <Navbar />
+      <Cart/>
       <main className="flex flex-col gap-16 relative">
         <Hero
           title={title}
