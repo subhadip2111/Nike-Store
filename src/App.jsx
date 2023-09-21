@@ -1,9 +1,11 @@
 //import { Hero } from "./components/index"
 import FlexContent from "./components/FlexContent";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 import Sales from "./components/Sales";
 import Stories from "./components/Stories";
-import { heroapi,popularsales,toprateslaes,highlight,sneaker,story } from "./data/data"
+import { heroapi,popularsales,toprateslaes,highlight,sneaker,story, footerAPI } from "./data/data"
 
 
 
@@ -13,6 +15,7 @@ const App = () => {
   const { title, subtitle, btntext, img, sociallinks, videos } = heroapi;
   return (
     <>
+      <Navbar/>
       <main className="flex flex-col gap-16 relative">
         <Hero
           title={title}
@@ -29,6 +32,8 @@ const App = () => {
         <FlexContent endpoint={sneaker} ifExists />
         <Stories story={story}/>
       </main>
+
+      <Footer footerAPI={ footerAPI} />
     </>
   );
 }

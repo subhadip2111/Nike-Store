@@ -6,7 +6,7 @@ import { ClockIcon } from "@heroicons/react/24/outline";
 import Title from "./utils/Title";
 import { truncate } from "lodash";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 const Stories = ({ story: { title, news } }) => {
   const splideOptions = {
     perPage: 4,
@@ -84,4 +84,24 @@ const Stories = ({ story: { title, news } }) => {
   );
 };
 
+
+
+
+Stories.propTypes = {
+  story: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    news: PropTypes.arrayOf(
+      PropTypes.shape({
+        img: PropTypes.string.isRequired,
+        like: PropTypes.number.isRequired,
+        time: PropTypes.string.isRequired,
+        by: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        btn: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};
 export default Stories;
