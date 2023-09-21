@@ -1,5 +1,6 @@
 //import { Hero } from "./components/index"
-import Cart from "./components/CArt";
+
+import Cart from "./components/Cart";
 import FlexContent from "./components/FlexContent";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -11,13 +12,12 @@ import { heroapi,popularsales,toprateslaes,highlight,sneaker,story, footerAPI } 
 
 
 
-
 const App = () => {
   const { title, subtitle, btntext, img, sociallinks, videos } = heroapi;
   return (
     <>
       <Navbar />
-      <Cart/>
+   <Cart/>
       <main className="flex flex-col gap-16 relative">
         <Hero
           title={title}
