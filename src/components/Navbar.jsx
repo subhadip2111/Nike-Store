@@ -1,5 +1,5 @@
-import  { useEffect, useState } from "react";
- import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 // import { selectTotalQTY, setOpenCart } from "../app/CartSlice.js";
 
 import {
@@ -55,7 +55,7 @@ const Navbar = () => {
             />{" "}
           </div>
 
-          <ul className="flex items-center justify-center gap-2">
+          <ul className="flex items-center justify-center gap-8">
             <li className="grid items-center">
               <MagnifyingGlassIcon
                 className={`icon-style ${
@@ -73,7 +73,7 @@ const Navbar = () => {
             <li className="grid items-center">
               <button
                 type="button"
-                onClick={onCartToggle }
+                onClick={onCartToggle}
                 className="border-none outline-none active:scale-110 transition-all duration-300 relative"
               >
                 <ShoppingBagIcon
@@ -88,7 +88,7 @@ const Navbar = () => {
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
                 >
-             {totalQTY}
+                  {totalQTY}
                 </div>
               </button>
             </li>
