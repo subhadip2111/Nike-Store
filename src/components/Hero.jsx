@@ -2,9 +2,7 @@ import Clips from "./utils/Clips";
 import PropTypes from "prop-types";
 import SocialLinks from "./utils/SocialLinks";
 const Hero = ({ title, subtitle, btntext, img, sociallinks, videos }) => {
-  // console.log(heroapi)
-
-  // const { title, subtitle, btntext, img, sociallinks, videos } = heroapi;
+  
   return (
     <>
       <div className="relative h-auto w-auto flex flex-col">

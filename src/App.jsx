@@ -1,4 +1,4 @@
-//import { Hero } from "./components/index"
+
 
 import Cart from "./components/Cart";
 import FlexContent from "./components/FlexContent";

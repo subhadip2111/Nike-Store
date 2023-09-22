@@ -46,7 +46,7 @@ const Navbar = () => {
             : "fixed top-0 left-0 right-0 h-[9vh] flex items-center justify-center opacity-100 z-[200] blur-effect-theme"
         }
       >
-        <nav className="flex items-center justify-between nike-containner">
+        <nav className="flex items-center justify-around nike-containner">
           <div className="flex items-center">
             <img
               src={logo}
